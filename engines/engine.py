@@ -171,7 +171,7 @@ def motis_serve(rid):
     work = D / rid / f"gen-{built['version']}"
     if (work / 'data').is_dir() and (rid not in procs or procs[rid].poll() is not None):
         log = open(work / 'serve.log', 'ab')
-        procs[rid] = subprocess.Popen(['/data/bin/motis', 'server', '-d', 'data', '-c', 'config.yml'], cwd=work,
+        procs[rid] = subprocess.Popen(['/data/bin/motis', 'server', '-d', 'data'], cwd=work,
                                       stdout=log, stderr=log)
 
 
