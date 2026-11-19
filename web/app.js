@@ -451,7 +451,7 @@ async function getRoutes() {
   ui.dir.routes = []; drawRoute();
   try {
     const body = { from: { lat: from.lat, lon: from.lon, name: from.name }, to: { lat: to.lat, lon: to.lon, name: to.name }, mode, lang: LANG };
-    if (mode === 'transit') body.depart_at = new Date().toISOString();
+    if (mode === 'transit') body.depart_at = new Date().toISOString().replace(/\.\d+Z$/, 'Z');
     const r = await api('api/route', body);
     if (seq !== routeSeq) return;
     ui.dir.routes = r.routes; ui.dir.pick = 0; ui.dir.result = r;
