@@ -10,7 +10,7 @@
 .search .wz-field { padding-left: 42px; padding-right: 44px; background: var(--wz-panel); border-color: var(--wz-border);
   backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: 0 4px 18px color-mix(in srgb, var(--wz-base) 40%, transparent); }
 .search .wz-field::-webkit-search-cancel-button { display: none; }
-.search-ic { position: absolute; left: 14px; width: 18px; height: 18px; fill: none; stroke: var(--wz-text-muted); stroke-width: 2; pointer-events: none; }
+.search-ic { position: absolute; z-index: 1; left: 14px; width: 18px; height: 18px; fill: none; stroke: var(--wz-text-muted); stroke-width: 2; pointer-events: none; }
 #q-clear { position: absolute; right: 0; }
 svg { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
